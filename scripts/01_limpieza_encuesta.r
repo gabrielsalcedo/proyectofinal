@@ -205,3 +205,20 @@ write_xlsx(base, "base.xlsx")
 ##############################################################
 # ✅ FIN DEL PROCESO DE LIMPIEZA Y TRANSFORMACIÓN
 ##############################################################
+
+#-------------------------------------------------------------
+#base dedatos para realizar el radar
+#-------------------------------------------------------------
+
+radar <- base %>%
+  select(nombre_del_establecimiento, distancia, starts_with('a_'))%>%
+  select(distancia, starts_with("a_")) %>%   # seleccionas solo las variables necesarias
+  group_by(distancia) %>%                    # agrupas por distancia
+  summarise(across(starts_with("a_"), sum, na.rm = TRUE))  # sumas los 1s de cada variable
+radar <- radar %>%
+  pivot_longer(-distancia, names_to = "problema", values_to = "suma") %>%
+  pivot_wider(names_from = distancia, values_from = suma)
+#-------------------------------------------------------------
+#Exportar la base
+#-------------------------------------------------------------
+write_xlsx(radar, "radar.xlsx")
