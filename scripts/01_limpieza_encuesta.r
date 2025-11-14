@@ -10,7 +10,13 @@ library(writexl)
 #-------------------------------------------------------------
 # 1️⃣ Cargar el archivo Excel original
 #-------------------------------------------------------------
-ENCUESTA <- read_excel("D:/universidad/ENCUESTA SOBRE EL IMPACTO DE LA CONSTRUCCIÓN DE LA ESTACION E15 DEL METRO(1-35).xlsx")
+url_raw <- "https://raw.githubusercontent.com/gabrielsalcedo/proyectofinal/3c7edd70a2fefd78417be9292175a6f7597fe135/data/raw/ENCUESTA%20SOBRE%20EL%20IMPACTO%20DE%20LA%20CONSTRUCCI%C3%93N%20DE%20LA%20ESTACION%20E15%20DEL%20METRO(1-35).xlsx"
+
+tmpfile <- tempfile(fileext = ".xlsx")
+download.file(url_raw, tmpfile, mode = "wb", quiet = TRUE)
+if (!file.exists(tmpfile)) stop("Error: el archivo no pudo descargarse.")
+
+ENCUESTA <- read_xlsx(tmpfile)
 
 #-------------------------------------------------------------
 # 2️⃣ Eliminar las primeras 6 columnas que no se necesitan
