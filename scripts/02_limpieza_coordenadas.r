@@ -6,12 +6,18 @@ install.packages("readxl")
 library(tidyverse)
 library(readxl)
 library(writexl)
+
 # 1️⃣ Leer el archivo Excel
-base <- read_excel(
-  "D:/universidad/Estudio Chapinero Central- Lugares propuestos.xlsx",
-  sheet = "Hoja1",
-  col_names = FALSE   # cambia a FALSE si la primera fila NO tiene nombres
-)
+
+url_raw <- "https://raw.githubusercontent.com/gabrielsalcedo/proyectofinal/0bbfd9b1c0b2f6eef4d5fa202eb3d9f019e16ff6/data/raw/Estudio%20Chapinero%20Central-%20Lugares%20propuestos.xlsx"
+
+# Descargar archivo temporalmente
+
+temp <- tempfile(fileext = ".xlsx")
+download.file(url_raw, temp, mode = "wb")
+
+# Leer sin convertir primera fila en nombres de columnas
+base <- read_xlsx(temp, col_names = FALSE)
 
 # 2️⃣ Renombrar columnas si aparecen como ...1, ...2, etc.
 # (de esta forma trabajamos con nombres más claros)
