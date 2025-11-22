@@ -1,2 +1,12 @@
-# Investigación cambios generados por la contrucción de la primero línea del Metro
-Pregunta de investigación: ¿Cómo ha cambiado la afluencia de clientes y la facturación en espacios de ocio frecuentados por universitarios a raíz de la construcción de la estación E15 en Chapinero Central, durante el primer semestre de 2025? 
+# Proyecto Final — Doing Economics
+
+Este proyecto analiza cómo la construcción del Metro de Bogotá está afectando actualmente a los comercios de Chapinero y cómo estos perciben los posibles beneficios futuros del proyecto.
+
+Para esto realizamos:
+- Revisión de literatura y planteamiento de la pregunta de investigación.  
+- Diseño del cuestionario y salida de campo para encuestar establecimientos.  
+- Limpieza, organización y análisis de la base de datos.  
+- Elaboración de visualizaciones, indicadores y un tablero en Power BI.  
+- Discusión de hallazgos y elaboración del documento final y la presentación.
+
+El repositorio reúne todos los documentos, datos y resultados del proyecto.
