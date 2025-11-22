@@ -7,6 +7,14 @@ Para esto realizamos:
 - Diseño del cuestionario y salida de campo para encuestar establecimientos.  
 - Limpieza, organización y análisis de la base de datos.  
 - Elaboración de visualizaciones, indicadores y un tablero en Power BI.  
-- Discusión de hallazgos y elaboración del documento final y la presentación.
+- Discusión de hallazgos y elaboración del documento final y el video.
 
 El repositorio reúne todos los documentos, datos y resultados del proyecto.
+
+## Autores
+Juan Paiva  
+Gabriel Salcedo  
+Isaac Suárez  
+Juan Vargas  
+Santiago Velandia  
+Esteban Vergara
